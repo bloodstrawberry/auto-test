@@ -1,6 +1,3 @@
 # HELLO!
 
 ## WORLD!
-
-
-react!!!!!!!!
