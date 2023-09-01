@@ -4,7 +4,7 @@ function myAdd(a, b) {
 }
 
 function myDivide(a, b) {
-  if (b === 0) throw new Error("Can't be divided by zero.");
+  if (b === 0) throw new Error("Can't be divided by zeroz.");
   return parseInt(a / b);
 }
 
