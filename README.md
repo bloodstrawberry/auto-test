@@ -1,1 +1,1 @@
-bloodzzzzz asdf
+bloodzzzzz asdf 뭐지
