@@ -1,1 +1,1 @@
-real Z
+PR + Merge → 메일 발송 확인!!
