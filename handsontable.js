@@ -22,8 +22,8 @@
     ],
     [
       "Toyota",
-      11,
-      1,
+      null,
+      null,
       10,
       12,
       "3",
@@ -186,7 +186,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap current highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -278,7 +278,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap",
+        "className": "htMiddle htCenter htNoWrap current highlight",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -288,7 +288,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap",
+        "className": "htMiddle htCenter htNoWrap current highlight",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -360,7 +360,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap",
+        "className": "htMiddle htCenter htNoWrap current highlight",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -370,7 +370,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap",
+        "className": "htMiddle htCenter htNoWrap current highlight",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -463,6 +463,21 @@
       }
     ]
   ],
-  "comments": "[{\"row\":2,\"col\":4,\"comment\":{\"value\":\"ZZZZ\"}},{\"row\":4,\"col\":3,\"comment\":{\"value\":\"ASDF\"}}]",
-  "mergeCells": "[{\"row\":1,\"col\":1,\"rowspan\":2,\"colspan\":2},{\"row\":2,\"col\":6,\"rowspan\":2,\"colspan\":2}]"
+  "comments": [
+    {
+      "row": 2,
+      "col": 4,
+      "comment": {
+        "value": "ZZZZ"
+      }
+    },
+    {
+      "row": 4,
+      "col": 3,
+      "comment": {
+        "value": "ASDF"
+      }
+    }
+  ],
+  "mergeCells": []
 }
