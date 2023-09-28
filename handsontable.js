@@ -27,8 +27,8 @@
       10,
       12,
       "3",
-      null,
-      ""
+      "merge",
+      null
     ],
     [
       "Honda",
@@ -37,8 +37,8 @@
       7,
       13,
       "4",
-      "",
-      "test"
+      null,
+      null
     ],
     [
       "Mazda",
@@ -186,7 +186,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap",
+        "className": "htMiddle htCenter htNoWrap current highlight",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -218,7 +218,7 @@
     ],
     [
       {
-        "className": "htMiddle htCenter htNoWrap current area highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -228,7 +228,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap area highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -238,7 +238,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap area highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -248,7 +248,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap area highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -258,7 +258,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap htCommentCell area highlight",
+        "className": "htMiddle htCenter htNoWrap htCommentCell",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -268,7 +268,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap area highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -278,7 +278,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap area highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -288,7 +288,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap area highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -464,5 +464,5 @@
     ]
   ],
   "comments": "[{\"row\":2,\"col\":4,\"comment\":{\"value\":\"ZZZZ\"}},{\"row\":4,\"col\":3,\"comment\":{\"value\":\"ASDF\"}}]",
-  "mergeCells": "[{\"row\":1,\"col\":1,\"rowspan\":2,\"colspan\":2}]"
+  "mergeCells": "[{\"row\":1,\"col\":1,\"rowspan\":2,\"colspan\":2},{\"row\":2,\"col\":6,\"rowspan\":2,\"colspan\":2}]"
 }
