@@ -34,7 +34,7 @@
       10,
       12,
       null,
-      null
+      ""
     ],
     [
       "Honda",
@@ -42,8 +42,8 @@
       3,
       7,
       13,
-      null,
-      null
+      "",
+      "test"
     ],
     [
       "Mazda",
@@ -98,7 +98,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap current area highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "bold",
           "fontStyle": "",
@@ -108,7 +108,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap area highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "bold",
           "fontStyle": "",
@@ -118,7 +118,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap area highlight",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "bold",
           "fontStyle": "",
@@ -406,7 +406,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap",
+        "className": "htMiddle htCenter htNoWrap current highlight",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -490,5 +490,5 @@
     ]
   ],
   "comments": "[{\"row\":2,\"col\":4,\"comment\":{\"value\":\"ZZZZ\"}},{\"row\":4,\"col\":3,\"comment\":{\"value\":\"ASDF\"}}]",
-  "mergeCells": "[{\"row\":1,\"col\":1,\"rowspan\":2,\"colspan\":2},{\"row\":2,\"col\":5,\"rowspan\":3,\"colspan\":2}]"
+  "mergeCells": "[{\"row\":1,\"col\":1,\"rowspan\":2,\"colspan\":2}]"
 }
