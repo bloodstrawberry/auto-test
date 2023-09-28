@@ -22,8 +22,8 @@
     ],
     [
       "Toyota",
-      null,
-      null,
+      11,
+      1,
       10,
       12,
       "3",
@@ -54,7 +54,7 @@
   "cellStyle": [
     [
       {
-        "className": "htMiddle htCenter htNoWrap htCommentCell",
+        "className": "htMiddle htCenter htNoWrap",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -186,7 +186,7 @@
         }
       },
       {
-        "className": "htMiddle htCenter htNoWrap highlight",
+        "className": "htMiddle htCenter htNoWrap current highlight",
         "style": {
           "fontWeight": "",
           "fontStyle": "",
@@ -463,22 +463,6 @@
       }
     ]
   ],
-  "comments": [
-    {
-      "row": 0,
-      "col": 0,
-      "comment": {}
-    },
-    {
-      "row": 2,
-      "col": 4,
-      "comment": {}
-    },
-    {
-      "row": 4,
-      "col": 3,
-      "comment": {}
-    }
-  ],
-  "mergeCells": []
+  "comments": "[{\"row\":2,\"col\":4,\"comment\":{\"value\":\"ZZZZ\"}},{\"row\":4,\"col\":3,\"comment\":{\"value\":\"ASDF\"}}]",
+  "mergeCells": "[{\"row\":1,\"col\":1,\"rowspan\":2,\"colspan\":2},{\"row\":2,\"col\":6,\"rowspan\":2,\"colspan\":2}]"
 }
