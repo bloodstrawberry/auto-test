@@ -1,0 +1,20 @@
+[
+  {
+    "userId": "02b",
+    "comId": "017",
+    "fullName": "Lily",
+    "userProfile": "https://www.linkedin.com/in/riya-negi-8879631a9/",
+    "text": "I think you have a point🤔",
+    "avatarUrl": "https://ui-avatars.com/api/name=Lily&background=random",
+    "replies": []
+  },
+  {
+    "userId": "bloodstrawberry",
+    "comId": "7492c39e-0c43-41e0-985a-46f841cb81eb",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/40860674?v=4",
+    "userProfile": "https://github.com/bloodstrawberry",
+    "fullName": "bloodstrawberry",
+    "text": "<p>zzzzz</p>",
+    "replies": []
+  }
+]
