@@ -31,7 +31,7 @@ jobs:
       # 최근 커밋의 메시지 추출하여 환경 변수로 설정
       - name: Get commit message body
         run: |
-          COMMIT_MESSAGE_BODY=$(git log -1 --pretty=%B | sed "s/'/'\"'\"'/g")
+          COMMIT_MESSAGE_BODY=$(git log -1 --pretty=%B | tr '\n' '|' | sed 's/|/\\n/g')
           echo "COMMIT_MESSAGE_BODY='${COMMIT_MESSAGE_BODY}'" >> $GITHUB_ENV
 
       # nodemailer 설치
