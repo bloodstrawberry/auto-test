@@ -9,14 +9,11 @@ async function sendEmail() {
       pass: process.env.NODE_MAIL_PASS,
     },
   });
-
-  let message = process.env.COMMIT_MESSAGE_BODY.replace(/\\n/g, "\n").split("\n");
-  let contents = message.slice(2, message.length - 1).join("\n");
   
   const mailOptions = {
     to: process.env.RECEIVER_EMAIL,
     subject: process.env.COMMIT_MESSAGE_SUBJECT,
-    text: contents,
+    text: process.env.COMMIT_MESSAGE_BODY.replace(/\\n/g, '\n'),
   };
 
   try {
