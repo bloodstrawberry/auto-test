@@ -13,7 +13,7 @@ async function sendEmail() {
   const mailOptions = {
     to: process.env.RECEIVER_EMAIL,
     subject: process.env.COMMIT_MESSAGE_SUBJECT,
-    text: process.env.COMMIT_MESSAGE_BODY,
+    text: ${process.env.COMMIT_MESSAGE_BODY},
   };
 
   try {
