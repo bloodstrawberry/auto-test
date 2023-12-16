@@ -2,17 +2,15 @@ const nodemailer = require('nodemailer');
 
 async function sendEmail() {
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT,
+    service: NODE_MAIL_SERVICE,
     secure: false,
     auth: {
-      user: process.env.EMAIL_USERNAME,
-      pass: process.env.EMAIL_PASSWORD,
+      user: process.env.NODE_MAIL_USER,
+      pass: process.env.NODE_MAIL_PASS,
     },
   });
 
   const mailOptions = {
-    from: process.env.EMAIL_USERNAME,
     to: process.env.RECEIVER_EMAIL,
     subject: 'GitHub Action Email',
     text: 'This email was sent using GitHub Actions!',
