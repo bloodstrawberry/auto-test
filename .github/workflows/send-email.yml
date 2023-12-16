@@ -22,6 +22,18 @@ jobs:
         id: read-file
         run: echo "RECEIVER_EMAIL=$(cat actions/mail_receiver.txt)" >> $GITHUB_ENV
 
+      # 최근 커밋의 제목 추출하여 환경 변수로 설정
+      - name: Get commit message subject
+        run: |
+          COMMIT_MESSAGE_SUBJECT=$(git log -1 --pretty=format:%s)
+          echo "COMMIT_MESSAGE_SUBJECT=${COMMIT_MESSAGE_SUBJECT}" >> $GITHUB_ENV
+      
+      # 최근 커밋의 메시지 추출하여 환경 변수로 설정
+      - name: Get commit message body
+        run: |
+          COMMIT_MESSAGE_BODY=$(git log -1 --pretty=%B)
+          echo "COMMIT_MESSAGE_BODY=${COMMIT_MESSAGE_BODY}" >> $GITHUB_ENV
+
       # nodemailer 설치
       - name: Install dependencies
         run: npm install nodemailer
@@ -35,3 +47,5 @@ jobs:
         env:
           NODE_MAIL_USER: ${{ secrets.NODE_MAIL_USER }}
           NODE_MAIL_PASS: ${{ secrets.NODE_MAIL_PASS }}
+          COMMIT_MESSAGE_SUBJECT: ${{ env.COMMIT_MESSAGE_SUBJECT }}
+          COMMIT_MESSAGE_BODY: ${{ env.COMMIT_MESSAGE_BODY }}
