@@ -16,22 +16,26 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-          
+
+      # 파일을 읽어 메일을 받는 사람(RECEIVER_EMAIL)를 환경변수로 설정 
       - name: Read mail receiver
         id: read-file
         run: echo "::set-output name=receiver_email::$(cat actions/mail_receiver.txt)"
         shell: bash
-      
+
       - name: Set environment variable
         run: echo "RECEIVER_EMAIL=${{ steps.read-file.outputs.receiver_email }}" >> $GITHUB_ENV
 
+      # nodemailer 설치
       - name: Install dependencies
         run: npm install nodemailer
-      
+
+      # sendEmail.js 실행
       - name: Send email
         run: |
           node ./actions/sendEmail.js
+          
+      # Secret에 설정한 변수를 환경 변수로 설정
         env:
-          NODE_MAIL_SERVICE: ${{ secrets.NODE_MAIL_SERVICE }}
           NODE_MAIL_USER: ${{ secrets.NODE_MAIL_USER }}
           NODE_MAIL_PASS: ${{ secrets.NODE_MAIL_PASS }}
