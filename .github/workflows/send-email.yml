@@ -16,6 +16,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+          
+      - name: Read mail receiver
+        id: read-file
+        run: echo "::set-output name=file_content::$(cat actions/mail_receiver.js)"
+      
+      - name: Set environment variable
+        run: echo "FILE_CONTENT='${{ steps.read-file.outputs.file_content }}'" >> $RECEIVER_EMAIL
 
       - name: Install dependencies
         run: npm install nodemailer
@@ -27,4 +34,3 @@ jobs:
           NODE_MAIL_SERVICE: ${{ secrets.NODE_MAIL_SERVICE }}
           NODE_MAIL_USER: ${{ secrets.NODE_MAIL_USER }}
           NODE_MAIL_PASS: ${{ secrets.NODE_MAIL_PASS }}
-          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
