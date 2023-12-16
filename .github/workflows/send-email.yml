@@ -22,7 +22,7 @@ jobs:
       
       - name: Send email
         run: |
-          node sendEmail.js
+          node ./github/sendEmail.js
         env:
           NODE_MAIL_SERVICE: ${{ secrets.NODE_MAIL_SERVICE }}
           NODE_MAIL_USER: ${{ secrets.NODE_MAIL_USER }}
