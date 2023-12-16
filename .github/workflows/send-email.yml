@@ -17,18 +17,6 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Generate Environment Variables File for Production
-        run: |
-          echo "NODE_MAIL_SERVICE=$NODE_MAIL_SERVICE" >> .env.production
-          echo "NODE_MAIL_USER=$NODE_MAIL_USER" >> .env.production
-          echo "NODE_MAIL_PASS=$NODE_MAIL_PASS" >> .env.production
-          echo "RECEIVER_EMAIL=$RECEIVER_EMAIL" >> .env.production
-        env:
-          NODE_MAIL_SERVICE: ${{ secrets.NODE_MAIL_SERVICE }}
-          NODE_MAIL_USER: ${{ secrets.NODE_MAIL_USER }}
-          NODE_MAIL_PASS: ${{ secrets.NODE_MAIL_PASS }}
-          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
-          
       - name: Install dependencies
         run: npm install nodemailer
       
