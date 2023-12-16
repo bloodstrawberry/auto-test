@@ -19,10 +19,11 @@ jobs:
           
       - name: Read mail receiver
         id: read-file
-        run: echo "::set-output name=file_content::$(cat actions/mail_receiver.js)"
+        run: echo "::set-output name=receiver_email::$(cat actions/mail_receiver.txt)"
+        shell: bash
       
       - name: Set environment variable
-        run: echo "FILE_CONTENT='${{ steps.read-file.outputs.file_content }}'" >> $RECEIVER_EMAIL
+        run: echo "RECEIVER_EMAIL=${{ steps.read-file.outputs.receiver_email }}" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: npm install nodemailer
