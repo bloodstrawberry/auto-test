@@ -13,7 +13,7 @@ async function sendEmail() {
   
   let message = process.env.COMMIT_MESSAGE_BODY.replace(/\\n/g, "\n").split("\n");
   let contents = message.slice(2, message.length).join("\n");
-  let address = fs.readFileSync("./mail_receiver.txt", "utf8");
+  let address = fs.readFileSync("actions/mail_receiver.txt", "utf8");
   
   const mailOptions = {
     to: process.env.RECEIVER_EMAIL,
