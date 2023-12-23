@@ -16,8 +16,8 @@ async function sendEmail() {
   let address = fs.readFileSync("actions/mail_receiver.txt", "utf8");
   
   const mailOptions = {
-    to: process.env.RECEIVER_EMAIL,
-    subject: address, //process.env.COMMIT_MESSAGE_SUBJECT,
+    to: address,
+    subject: process.env.COMMIT_MESSAGE_SUBJECT,
     text: contents,
   };
 
