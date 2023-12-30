@@ -2,8 +2,8 @@ name: Send Email
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - actions/mail_receiver.txt
 
 jobs:
   send_email:
