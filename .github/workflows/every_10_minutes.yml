@@ -3,12 +3,13 @@ name: Every 10 Minutes Job
 on:
   schedule:
     - cron: '*/10 * * * *'  # cron 표현식으로 1시간마다 실행 (분: 0, 시: 모든 시간)
-
+    
 jobs:
-  hourly_job:
+  ten_minutes_job:
     runs-on: ubuntu-latest
 
     steps:
       - name: Display current time
+        id: current_time
         run: |
-          echo "Current time: ${{ steps.set_date.outputs.current_time }}"
+          echo "::set-output name=time::$(date +"%Y-%m-%dT%H:%M:%SZ")"
