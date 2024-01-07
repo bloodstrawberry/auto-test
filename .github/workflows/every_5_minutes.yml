@@ -17,5 +17,5 @@ jobs:
       - name: Display current time
         run: |
           echo "Current Time : "
-          echo "$(date + "%Y-%m-%dT%H:%M:%SZ")"
-          echo "$(TZ=Asia/Seoul date +"%Y-%m-%dT%H:%M:%SZ")"
+          echo "UTC   : $(date +"%Y-%m-%dT%H:%M:%SZ")"
+          echo "SEOUL : $(TZ=Asia/Seoul date +"%Y-%m-%dT%H:%M:%SZ")"
