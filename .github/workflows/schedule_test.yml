@@ -1,0 +1,13 @@
+name: Hourly Job
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # cron 표현식으로 1시간마다 실행 (분: 0, 시: 모든 시간)
+
+jobs:
+  hourly_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display current time
+        run: echo "Current time: $(date)"
