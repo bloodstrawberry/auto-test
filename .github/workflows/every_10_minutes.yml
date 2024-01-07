@@ -2,7 +2,7 @@ name: Every 10 Minutes Job
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # cron 표현식으로 10분마다 실행 (분: 0, 10, 20, 30, 40, 50)
+    - cron: '*/5 * * * *'  # cron 표현식으로 10분마다 실행 (분: 0, 10, 20, 30, 40, 50)
 
 jobs:
   ten_minutes_job:
@@ -12,5 +12,5 @@ jobs:
       - name: Display current time
         run: |
           echo "Current Time : "
-          echo "UTC   : $(date +"%Y-%m-%dT%H:%M:%SZ")"
-          echo "Seoul : $(TZ=Asia/Seoul date +"%Y-%m-%dT%H:%M:%SZ")"
+          echo "$(date + "%Y-%m-%dT%H:%M:%SZ")"
+          echo "$(TZ=Asia/Seoul date +"%Y-%m-%dT%H:%M:%SZ")"
