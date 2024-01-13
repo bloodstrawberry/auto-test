@@ -1,5 +1,8 @@
 README 수정
 
+![image](https://github.com/bloodstrawberry/auto-test/blob/main/KakaoTalk_20230212_143204341_01.jpg)
+
+https://github.com/bloodstrawberry/auto-test/blob/main/KakaoTalk_20230212_143204341_01.jpg
 ***
 
 <div align=center><h1>📚 STACKS</h1></div>
