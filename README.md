@@ -1,4 +1,4 @@
-README 수정
+README 수정ㅋㅋㅋㅋ
 
 ![image](https://github.com/bloodstrawberry/auto-test/blob/main/KakaoTalk_20230212_143204341_01.jpg)
 
