@@ -16,7 +16,7 @@ image 2
 
 ***
 
-![image](https://github.com/bloodstrawberry/auto-test/raw/main/images/image_2024_01_17_21_10_51_0.jpg)
+![image](https://github.com/bloodstrawberry/auto-test/raw/main/images/image_2024_01_17_21_16_02_0.jpg)
 
 <br>
 <br>
