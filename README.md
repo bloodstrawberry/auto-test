@@ -13,8 +13,7 @@ image 1
 image 2
 
 <br>
-![image](https://github.com/bloodstrawberry/auto-test/raw/main/images/image_2024_01_17_21_00_32_0.jpg)
-
+<br>
 <br>
 <br>
 <br>
