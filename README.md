@@ -1,5 +1,8 @@
-image1
+image test blob
+![image](https://github.com/bloodstrawberry/auto-test/blob/main/images/bloodstrawberry.jpg)
 
-![image](https://github.com/bloodstrawberry/auto-test/raw/main/KakaoTalk_20230212_143204341_01.jpg)
+image test raw
+![image](https://github.com/bloodstrawberry/auto-test/raw/main/images/bloodstrawberry.jpg)
+
 
 
