@@ -25,6 +25,7 @@ jobs:
       run: |
         npm install axios
         npm install @octokit/rest
+        npm install @octokit/plugin-request-log
         
     - name: Run Node.js Script
       run: node actions/lotto.js
