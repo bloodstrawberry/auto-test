@@ -1,6 +1,13 @@
 const fs = require("fs");
 const axios = require("axios");
-const { Octokit } = require("@octokit/rest");
+const { Octokit } = require("@octokit/core");
+const { createRequestLog } = require("@octokit/plugin-request-log");
+
+const MyOctokit = Octokit.plugin(createRequestLog);
+
+const octokit = new MyOctokit({
+  auth: process.env.MY_TOKEN,
+});
 
 const getLottoNumber = async (drwNo) => {
   try {
@@ -14,10 +21,6 @@ const getLottoNumber = async (drwNo) => {
     return undefined;
   }
 };
-
-const octokit = new Octokit({
-  auth: process.env.GH_TOKEN,
-});
 
 const getSHA = async (path) => {
   const result = await octokit.request(
@@ -46,7 +49,7 @@ const fileWrite = async (path, contents) => {
         name: "bloodstrawberry",
         email: "bloodstrawberry@github.com",
       },
-      content: `${btoa(contents)}`,
+      content: `${Buffer.from(contents).toString("base64")}`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
