@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      GH_TOKEN: ${{ secrets.MY_TOKEN }} #test
+      GH_TOKEN: ${{ secrets.MY_TOKEN }}
       
     steps:
     - name: Checkout Repository
