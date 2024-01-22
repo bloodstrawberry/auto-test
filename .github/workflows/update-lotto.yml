@@ -25,7 +25,7 @@ jobs:
       run: |
         npm install axios
         npm install @octokit/rest
-        npm install node-fetch@latest
+        npm install node-fetch@2
 
     - name: Run Node.js Script
       run: node actions/lotto.js
