@@ -6,7 +6,7 @@ const { createRequestLog } = require("@octokit/plugin-request-log");
 const MyOctokit = Octokit.plugin(createRequestLog);
 
 const octokit = new MyOctokit({
-  auth: process.env.MY_TOKEN,
+  auth: process.env.GH_TOKEN,
 });
 
 const getLottoNumber = async (drwNo) => {
