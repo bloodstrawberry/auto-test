@@ -53,6 +53,8 @@ const fileWrite = async (path, contents) => {
     }
   );
 
+  console.log(result.status);
+
   return result.status;
 };
 
@@ -80,9 +82,9 @@ const updateLottoJson = async () => {
     lottoJson.push(latest);
 
     const updatedJson = JSON.stringify(lottoJson, null, 2);
-    let response = await fileWrite("actions/lotto.json", updatedJson);
+    //let response = await fileWrite("actions/lotto.json", updatedJson);
 
-    console.log(response);
+    //console.log(response);
   } catch (err) {
     console.error("error : ", err);
     process.exit(1);
