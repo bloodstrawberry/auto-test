@@ -20,6 +20,8 @@ const getLottoNumber = async (drwNo) => {
 };
 
 const getSHA = async (path) => {
+  try {
+    
   const result = await octokit.request(
     `GET /repos/bloodstrawberry/auto-test/contents/${path}`,
     {
@@ -28,12 +30,18 @@ const getSHA = async (path) => {
       path,
     }
   );
+  } catch (e) {
+    console.log("error zz", e);
+    return undefined;
+  }
+  
 
   return result.data.sha;
 };
 
 const fileWrite = async (path, contents) => {
   const currentSHA = await getSHA(path);
+  console.log(currentSHA);
   const result = await octokit.request(
     `PUT /repos/bloodstrawberry/auto-test/contents/${path}`,
     {
