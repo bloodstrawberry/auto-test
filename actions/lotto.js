@@ -72,7 +72,7 @@ const updateLottoJson = async () => {
     
     const lastNumber = lottoJson[lottoJson.length - 1].drwNo;
 
-    const latest = await getLottoNumber(lastNumber + 1);
+    //const latest = await getLottoNumber(lastNumber + 1);
     const latest = {h : "hello"};
     
     console.log("=============");   
