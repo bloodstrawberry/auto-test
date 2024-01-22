@@ -35,13 +35,13 @@ const getSHA = async (path) => {
       path,
     }
   );
+  return result.data.sha;
   } catch (e) {
     console.log("error zz", e);
     return undefined;
   }
-  
 
-  return result.data.sha;
+
 };
 
 const fileWrite = async (path, contents) => {
