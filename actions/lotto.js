@@ -1,6 +1,7 @@
 const fs = require("fs");
 const axios = require("axios");
-const fetch = require("node-fetch").default;
+const fetch = require("node-fetch");
+
 const { Octokit } = require("@octokit/core");
 
 const octokit = new Octokit({
