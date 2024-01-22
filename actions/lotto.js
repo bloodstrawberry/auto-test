@@ -15,7 +15,7 @@ const getLottoNumber = async (drwNo) => {
 };
 
 const updateLottoJson = async () => {
-  const filePath = "lotto.json";
+  const filePath = "actions/lotto.json";
 
   try {
     const data = fs.readFileSync(filePath, "utf-8");
