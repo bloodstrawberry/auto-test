@@ -30,4 +30,7 @@ jobs:
         git config --global user.name "bloodstrawberry"
         git add actions/lotto.json
         git commit -m "Update lotto file via GitHub Actions"
-        git push
+        git remote add origin_with_token https://$GH_TOKEN@github.com/bloodstrawberry/auto-test.git
+        git push origin_with_token
+env:
+  GH_TOKEN: ${{ secrets.MY_TOKEN }}
