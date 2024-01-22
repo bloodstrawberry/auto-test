@@ -27,7 +27,7 @@ const getSHA = async (path) => {
   try {
     
   const result = await octokit.request(
-    `GET /repos/bloodstrawberry/auto-test/contents/${path}`,
+    `GET /repos/bloodstrawberry/auto-test/contents/actions/lotto.json`,
     {
       owner: "bloodstrawberry",
       repo: "auto-test",
@@ -46,6 +46,7 @@ const getSHA = async (path) => {
 const fileWrite = async (path, contents) => {
   const currentSHA = await getSHA(path);
   console.log(currentSHA);
+  if(currentSHA === undefined) return;
   const result = await octokit.request(
     `PUT /repos/bloodstrawberry/auto-test/contents/${path}`,
     {
