@@ -68,11 +68,13 @@ const updateLottoJson = async () => {
     console.log("=============");
     console.log(`${btoa(contents)}`);
     console.log("=============");    
-    console.log(lottoJson);
+    //console.log(lottoJson);
     
     const lastNumber = lottoJson[lottoJson.length - 1].drwNo;
 
     const latest = await getLottoNumber(lastNumber + 1);
+    const latest = {h : "hello"};
+    
     console.log("=============");   
     console.log(latest);
     lottoJson.push(latest);
