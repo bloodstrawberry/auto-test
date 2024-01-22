@@ -28,6 +28,6 @@ jobs:
       run: |
         git config --global user.email "vvv3334@hanmail.net"
         git config --global user.name "bloodstrawberry"
-        git add lotto.json
+        git add actions/lotto.json
         git commit -m "Update lotto file via GitHub Actions"
         git push
