@@ -19,7 +19,7 @@ jobs:
         node-version: '16'
 
     - name: Install Dependencies
-      run: npm install
+      run: npm install axios
 
     - name: Run Node.js Script
       run: node actions/lotto.js
