@@ -1,11 +1,8 @@
 const fs = require("fs");
 const axios = require("axios");
 const { Octokit } = require("@octokit/core");
-const { createRequestLog } = require("@octokit/plugin-request-log");
 
-const MyOctokit = Octokit.plugin(createRequestLog);
-
-const octokit = new MyOctokit({
+const octokit = new Octokit({
   auth: process.env.GH_TOKEN,
 });
 
