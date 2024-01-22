@@ -26,28 +26,25 @@ const getLottoNumber = async (drwNo) => {
 
 const getSHA = async (path) => {
   try {
-    
-  const result = await octokit.request(
-    `GET /repos/bloodstrawberry/auto-test/contents/actions/lotto.json`,
-    {
-      owner: "bloodstrawberry",
-      repo: "auto-test",
-      path,
-    }
-  );
-  return result.data.sha;
+    const result = await octokit.request(
+      `GET /repos/bloodstrawberry/auto-test/contents/actions/lotto.json`,
+      {
+        owner: "bloodstrawberry",
+        repo: "auto-test",
+        path,
+      }
+    );
+    return result.data.sha;
   } catch (e) {
     console.log("error zz", e);
     return undefined;
   }
-
-
 };
 
 const fileWrite = async (path, contents) => {
   const currentSHA = await getSHA(path);
   console.log(currentSHA);
-  if(currentSHA === undefined) return;
+  if (currentSHA === undefined) return;
   const result = await octokit.request(
     `PUT /repos/bloodstrawberry/auto-test/contents/${path}`,
     {
@@ -78,28 +75,17 @@ const updateLottoJson = async () => {
   try {
     const data = fs.readFileSync(filePath, "utf-8");
     const lottoJson = JSON.parse(data);
-
-    let contents = "text!!";
-    console.log(`${Buffer.from(contents).toString("base64")}`);
-    console.log("=============");
-    console.log(`${btoa(contents)}`);
-    console.log("=============");    
-    //console.log(lottoJson);
-    
     const lastNumber = lottoJson[lottoJson.length - 1].drwNo;
 
+    return;
     //const latest = await getLottoNumber(lastNumber + 1);
-    const latest = {h : "hello"};
-    
-    console.log("=============");   
-    console.log(latest);
+    const latest = { h: "hello" };
+
     lottoJson.push(latest);
 
     const updatedJson = JSON.stringify(lottoJson, null, 2);
-    //let response = await fileWrite("actions/lotto.json", updatedJson);
-    fileWrite("actions/lotto.json", updatedJson);
-
-    //console.log(response);
+    let response = await fileWrite(filePath, updatedJson);    
+    console.log(response);
   } catch (err) {
     console.error("error : ", err);
     process.exit(1);
