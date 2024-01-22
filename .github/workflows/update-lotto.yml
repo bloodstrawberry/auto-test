@@ -1,0 +1,33 @@
+name: Update Lotto File
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  update-lotto:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set Up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Node.js Script
+      run: node actions/lotto.js
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.email "vvv3334@hanmail.net"
+        git config --global user.name "bloodstrawberry"
+        git add lotto.json
+        git commit -m "Update lotto file via GitHub Actions"
+        git push
