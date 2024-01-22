@@ -1,13 +1,8 @@
 name: Update Lotto File
 
-#on:
-#  schedule:
-#    - cron: '0 0 * * 2' #'0 13 * * 6'
-
 on:
-  push:
-    paths:
-      - '.github/workflows/update-lotto.yml'
+  schedule:
+    - cron: '0 0 * * 2' #'0 13 * * 6'
 
 jobs:
   update-lotto:
