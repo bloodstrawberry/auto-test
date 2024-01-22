@@ -37,15 +37,13 @@ const getSHA = async (path) => {
 
     return result.data.sha;
   } catch (e) {
-    console.log("error zz", e);
+    console.log("error : ", e);
     return undefined;
   }
 };
 
 const fileWrite = async (path, contents) => {
   const currentSHA = await getSHA(path);
-  console.log(currentSHA);
-  if (currentSHA === undefined) return;
   const result = await octokit.request(
     `PUT /repos/bloodstrawberry/auto-test/contents/${path}`,
     {
@@ -58,7 +56,7 @@ const fileWrite = async (path, contents) => {
         name: "bloodstrawberry",
         email: "bloodstrawberry@github.com",
       },
-      content: `${Buffer.from(contents).toString("base64")}`,
+      content: `${btoa(contents)}`, // or `${Buffer.from(contents).toString("base64")}`,      
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
@@ -78,9 +76,8 @@ const updateLottoJson = async () => {
     const lottoJson = JSON.parse(data);
     const lastNumber = lottoJson[lottoJson.length - 1].drwNo;
 
-    //const latest = await getLottoNumber(lastNumber + 1);
-    const latest = { h: "hello" };
-
+    const latest = await getLottoNumber(lastNumber + 1);
+    
     lottoJson.push(latest);
 
     const updatedJson = JSON.stringify(lottoJson, null, 2);
