@@ -22,8 +22,10 @@ jobs:
         node-version: '16'
 
     - name: Install Dependencies
-      run: npm install axios
-
+      run: |
+        npm install axios
+        npm install @octokit/rest
+        
     - name: Run Node.js Script
       run: node actions/lotto.js
 
