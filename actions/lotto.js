@@ -83,6 +83,7 @@ const updateLottoJson = async () => {
 
     const updatedJson = JSON.stringify(lottoJson, null, 2);
     //let response = await fileWrite("actions/lotto.json", updatedJson);
+    fileWrite("actions/lotto.json", updatedJson);
 
     //console.log(response);
   } catch (err) {
