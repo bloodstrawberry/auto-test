@@ -76,8 +76,8 @@ const updateLottoJson = async () => {
     const lottoJson = JSON.parse(data);
     const lastNumber = lottoJson[lottoJson.length - 1].drwNo;
 
-    const latest = await getLottoNumber(lastNumber + 1);
-
+    //const latest = await getLottoNumber(lastNumber + 1);
+    const latest = {h : "zzz"};
     lottoJson.push(latest);
 
     const updatedJson = JSON.stringify(lottoJson, null, 2);
