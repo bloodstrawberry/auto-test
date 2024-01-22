@@ -65,14 +65,23 @@ const updateLottoJson = async () => {
   try {
     const data = fs.readFileSync(filePath, "utf-8");
     const lottoJson = JSON.parse(data);
+
+    let contents = "text!!";
+    console.log(`${Buffer.from(contents).toString("base64")}`);
+    console.log("=============");
+    console.log(`${btoa(contents)}`);
+    console.log("=============");    
+    console.log(lottoJson);
+    
     const lastNumber = lottoJson[lottoJson.length - 1].drwNo;
 
     const latest = await getLottoNumber(lastNumber + 1);
-
+    console.log("=============");   
+    console.log(latest);
     lottoJson.push(latest);
 
     const updatedJson = JSON.stringify(lottoJson, null, 2);
-    let response = await fileWrite(filePath, updatedJson);
+    let response = await fileWrite("actions/lotto.json", updatedJson);
 
     console.log(response);
   } catch (err) {
