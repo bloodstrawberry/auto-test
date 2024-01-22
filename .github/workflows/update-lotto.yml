@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      GH_TOKEN: ${{ secrets.MY_TOKEN }} 
-
+      GH_TOKEN: ${{ secrets.MY_TOKEN }} #test
+      
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
