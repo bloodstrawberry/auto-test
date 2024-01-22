@@ -1,9 +1,13 @@
 const fs = require("fs");
 const axios = require("axios");
+import fetch from "node-fetch";
 const { Octokit } = require("@octokit/core");
 
 const octokit = new Octokit({
   auth: process.env.GH_TOKEN,
+  request: {
+    fetch: fetch,
+  },
 });
 
 const getLottoNumber = async (drwNo) => {
