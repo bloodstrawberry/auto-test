@@ -2,14 +2,14 @@ name: Update Lotto File
 
 on:
   schedule:
-    - cron: '*/10 * * * *' 
+    - cron: '0 0 * * 2' #'0 13 * * 6'
 
 jobs:
   update-lotto:
     runs-on: ubuntu-latest
 
     env:
-      GH_TOKEN: ${{ secrets.MY_TOKEN }} # 토큰
+      GH_TOKEN: ${{ secrets.MY_TOKEN }}
       
     steps:
     - name: Checkout Repository
