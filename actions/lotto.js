@@ -34,6 +34,7 @@ const getSHA = async (path) => {
         path,
       }
     );
+
     return result.data.sha;
   } catch (e) {
     console.log("error zz", e);
@@ -77,7 +78,6 @@ const updateLottoJson = async () => {
     const lottoJson = JSON.parse(data);
     const lastNumber = lottoJson[lottoJson.length - 1].drwNo;
 
-    return;
     //const latest = await getLottoNumber(lastNumber + 1);
     const latest = { h: "hello" };
 
