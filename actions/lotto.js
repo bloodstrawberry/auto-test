@@ -1,5 +1,6 @@
 const fs = require("fs");
 const axios = require("axios");
+const { Octokit } = require("@octokit/rest");
 
 const getLottoNumber = async (drwNo) => {
   try {
@@ -12,6 +13,47 @@ const getLottoNumber = async (drwNo) => {
   } catch (e) {
     return undefined;
   }
+};
+
+const octokit = new Octokit({
+  auth: process.env.MY_TOKEN,
+});
+
+const getSHA = async (path) => {
+  const result = await octokit.request(
+    `GET /repos/bloodstrawberry/auto-test/contents/${path}`,
+    {
+      owner: "bloodstrawberry",
+      repo: "auto-test",
+      path,
+    }
+  );
+
+  return result.data.sha;
+};
+
+const fileWrite = async (path, contents) => {
+  const currentSHA = await getSHA(path);
+  const result = await octokit.request(
+    `PUT /repos/bloodstrawberry/auto-test/contents/${path}`,
+    {
+      owner: "bloodstrawberry",
+      repo: "auto-test",
+      path,
+      message: `Update ${path}`,
+      sha: currentSHA,
+      committer: {
+        name: "bloodstrawberry",
+        email: "bloodstrawberry@github.com",
+      },
+      content: `${btoa(contents)}`,
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    }
+  );
+
+  return result.status;
 };
 
 const updateLottoJson = async () => {
@@ -27,10 +69,9 @@ const updateLottoJson = async () => {
     lottoJson.push(latest);
 
     const updatedJson = JSON.stringify(lottoJson, null, 2);
+    let response = await fileWrite(filePath, updatedJson);
 
-    fs.writeFileSync(filePath, updatedJson);
-
-    console.log("success");
+    console.log(response);
   } catch (err) {
     console.error("error : ", err);
     process.exit(1);
