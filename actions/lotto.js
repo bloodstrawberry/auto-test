@@ -16,7 +16,7 @@ const getLottoNumber = async (drwNo) => {
 };
 
 const octokit = new Octokit({
-  auth: process.env.MY_TOKEN,
+  auth: process.env.GH_TOKEN,
 });
 
 const getSHA = async (path) => {
