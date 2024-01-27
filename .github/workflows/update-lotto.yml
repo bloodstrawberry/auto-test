@@ -2,7 +2,7 @@ name: Update Lotto File
 
 on:
   schedule:
-    - cron: '0 13 * * 6'
+    - cron: '20 13 * * 6'
 
 jobs:
   update-lotto:
