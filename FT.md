@@ -1,5 +1,7 @@
 # free-template
 
+https://github.com/TailAdmin/free-react-tailwind-admin-dashboard
+
 https://www.creative-tim.com/templates/react-free   
 https://www.wrappixel.com/templates/category/react-templates/   
 https://colorlib.com/wp/free-react-templates/   
