@@ -38,6 +38,8 @@ jobs:
         run: |
           ABSOLUTE_PATH=actions
           echo "Current absolute path: $ABSOLUTE_PATH"
+          echo "::set-env name=ABSOLUTE_PATH::$ABSOLUTE_PATH" # 환경 변수 설정
+          echo "$GITHUB_WORKSPACE"
 
       # nodemailer 설치
       - name: Install dependencies
@@ -46,7 +48,7 @@ jobs:
       # sendEmail.js 실행
       - name: Send email
         run: |
-          node ./$ABSOLUTE_PATH/sendEmail.js
+          node ./$GITHUB_WORKSPACE/sendEmail.js
           
       # Secret에 설정한 변수를 환경 변수로 설정
         env:
