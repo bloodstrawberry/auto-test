@@ -34,6 +34,11 @@ jobs:
           COMMIT_MESSAGE_BODY=$(git log -1 --pretty=%B | tr '\n' '|' | sed 's/|/\\n/g')
           echo "COMMIT_MESSAGE_BODY=${COMMIT_MESSAGE_BODY}" >> $GITHUB_ENV
 
+      - name: Print absolute path
+        run: |
+          ABSOLUTE_PATH=$(pwd)
+          echo "Current absolute path: $ABSOLUTE_PATH"
+
       # nodemailer 설치
       - name: Install dependencies
         run: npm install nodemailer
@@ -41,7 +46,7 @@ jobs:
       # sendEmail.js 실행
       - name: Send email
         run: |
-          node ./actions/sendEmail.js
+          node $ABSOLUTE_PATH/actions/sendEmail.js
           
       # Secret에 설정한 변수를 환경 변수로 설정
         env:
