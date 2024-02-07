@@ -10,7 +10,8 @@ async function sendEmail() {
       pass: process.env.NODE_MAIL_PASS,
     },
   });
-  
+
+  console.log(process.env.NODE_MAIL_USER);
   let message = process.env.COMMIT_MESSAGE_BODY.replace(/\\n/g, "\n").split("\n");
   let contents = message.slice(2, message.length).join("\n");
   let address = fs.readFileSync("actions/mail_receiver.txt", "utf8");
