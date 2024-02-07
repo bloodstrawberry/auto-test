@@ -46,7 +46,7 @@ jobs:
       # sendEmail.js 실행
       - name: Send email
         run: |
-          node $ABSOLUTE_PATH/actions/sendEmail.js
+          node ./actions/sendEmail.js
           
       # Secret에 설정한 변수를 환경 변수로 설정
         env:
