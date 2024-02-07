@@ -37,9 +37,7 @@ jobs:
       - name: Print absolute path
         run: |
           ABSOLUTE_PATH=actions
-          echo "Current absolute path: $ABSOLUTE_PATH"
-          echo "::set-env name=ABSOLUTE_PATH::$ABSOLUTE_PATH" # 환경 변수 설정
-          echo "$GITHUB_WORKSPACE"
+          echo "Current absolute path: $GITHUB_WORKSPACE"
 
       # nodemailer 설치
       - name: Install dependencies
