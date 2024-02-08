@@ -1,20 +1,67 @@
-Class Diagram
 ```mermaid
-classDiagram
-Class01 <|-- AveryLongClass : Cool
-<<Interface>> Class01
-Class09 --> C2 : Where am I?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-class Class10 {
-  <<service>>
-  int id
-  size()
-}
+  classDiagram    
+    class Iterator { 
+      hasNext()*
+      next()*
+    }
+    class ApartIterator { 
+      hasNext()
+      next()
+    }
+    class OfficeIterator { 
+      hasNext()
+      next()
+    }
+    class Manager {
+      printAll()
+    }
+    class Building {
+      makeIterator()*
+    }
+    class Apart {
+      floors
+      makeIterator()
+    }
+    class Office {
+      floors
+      makeIterator()
+    }
+    
+    <<Interface>> Iterator
+    <<Interface>> Building
+    
 
+    Iterator <|.. ApartIterator
+    Iterator <|.. OfficeIterator    
+    Iterator <-- Manager
+    Building <-- Manager
+    Building <|.. Apart
+    Building <|.. Office    
+```
+
+```mermaid
+  classDiagram    
+    class Iterator { 
+      hasNext()*
+      next()*
+    }
+    class ConcreteIterator { 
+      hasNext()
+      next()
+    }
+    class Client {
+    }
+    class Aggregate {
+      makeIterator()*
+    }
+    class ConcreteAggregate {
+      makeIterator()
+    }
+
+    <<Interface>> Iterator
+    <<Interface>> Aggregate
+    
+    Iterator <|.. ConcreteIterator
+    Aggregate <|.. ConcreteAggregate
+    
 ```
