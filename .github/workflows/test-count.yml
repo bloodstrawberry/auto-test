@@ -1,4 +1,4 @@
-name: Send Email
+name: Test Count
 
 on:
   push:
