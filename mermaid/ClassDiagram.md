@@ -1,67 +1,34 @@
-```mermaid
-  classDiagram    
-    class Iterator { 
-      hasNext()*
-      next()*
-    }
-    class ApartIterator { 
-      hasNext()
-      next()
-    }
-    class OfficeIterator { 
-      hasNext()
-      next()
-    }
-    class Manager {
-      printAll()
-    }
-    class Building {
-      makeIterator()*
-    }
-    class Apart {
-      floors
-      makeIterator()
-    }
-    class Office {
-      floors
-      makeIterator()
-    }
-    
-    <<Interface>> Iterator
-    <<Interface>> Building
-    
-
-    Iterator <|.. ApartIterator
-    Iterator <|.. OfficeIterator    
-    Iterator <-- Manager
-    Building <-- Manager
-    Building <|.. Apart
-    Building <|.. Office    
-```
 
 ```mermaid
   classDiagram    
-    class Iterator { 
-      hasNext()*
-      next()*
+    class Visitor {
+      visit(Element)*
+    }    
+    class ConcreteVisitorA {
+      visit(Element)
     }
-    class ConcreteIterator { 
-      hasNext()
-      next()
+    class ConcreteVisitorB {
+      visit(Element)   
     }
-    class Client {
+    class Element {
+      accept(Visitor) 
     }
-    class Aggregate {
-      makeIterator()*
+    class ConcreteElementA {
+      accept(Visitor)
     }
-    class ConcreteAggregate {
-      makeIterator()
+    class ConcreteElementB {
+      accept(Visitor)   
     }
 
-    <<Interface>> Iterator
-    <<Interface>> Aggregate
+    <<interface>> Visitor
+    <<interface>> Element
     
-    Iterator <|.. ConcreteIterator
-    Aggregate <|.. ConcreteAggregate
+    Client --> Visitor
+    Client --> Element
     
+    Visitor <|.. ConcreteVisitorA
+    Visitor <|.. ConcreteVisitorB 
+    Visitor <-- Element 
+    Element <|.. ConcreteElementA
+    Element <|.. ConcreteElementB     
 ```
