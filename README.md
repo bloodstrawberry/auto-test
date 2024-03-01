@@ -2,7 +2,6 @@ image 0
 
 ***
 
-![image](https://github.com/bloodstrawberry/auto-test/raw/main/images/image_2024_01_17_21_19_14_0.jpg)
 
 <br>
 <br>
