@@ -18,12 +18,11 @@ let file = {
   parentId: "",
 };
 
-
-
 const fs = require("fs");
 const path = require("path");
 
 const dirPath = path.resolve("./actions/myfiles");
+console.log({ dirPath });
 
 let pathIdMap = {};
 let id_counter = 0;
