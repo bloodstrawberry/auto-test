@@ -1,0 +1,51 @@
+name: Test Count
+
+on:
+  push:
+    paths:
+      - actions/mail_receiver.txt
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # 파일을 읽어 메일을 받는 사람(RECEIVER_EMAIL)를 환경변수로 설정 
+      - name: Read mail receiver
+        id: read-file
+        run: echo "RECEIVER_EMAIL=$(cat actions/mail_receiver.txt)" >> $GITHUB_ENV
+
+      # 최근 커밋의 제목 추출하여 환경 변수로 설정
+      - name: Get commit message subject
+        run: |
+          COMMIT_MESSAGE_SUBJECT=$(git log -1 --pretty=format:%s)
+          echo "COMMIT_MESSAGE_SUBJECT=${COMMIT_MESSAGE_SUBJECT}" >> $GITHUB_ENV
+      
+      # 최근 커밋의 메시지 추출하여 환경 변수로 설정
+      - name: Get commit message body
+        run: |
+          COMMIT_MESSAGE_BODY=$(git log -1 --pretty=%B | tr '\n' '|' | sed 's/|/\\n/g')
+          echo "COMMIT_MESSAGE_BODY=${COMMIT_MESSAGE_BODY}" >> $GITHUB_ENV
+
+      # nodemailer 설치
+      - name: Install dependencies
+        run: npm install nodemailer
+
+      # sendEmail.js 실행
+      - name: Send email
+        run: |
+          node ./actions/make_dir_map.js
+          
+      # Secret에 설정한 변수를 환경 변수로 설정
+        env:
+          NODE_MAIL_USER: ${{ secrets.NODE_MAIL_USER }}
+          NODE_MAIL_PASS: ${{ secrets.NODE_MAIL_PASS }}
+          COMMIT_MESSAGE_SUBJECT: ${{ env.COMMIT_MESSAGE_SUBJECT }}
+          COMMIT_MESSAGE_BODY: ${{ env.COMMIT_MESSAGE_BODY }}

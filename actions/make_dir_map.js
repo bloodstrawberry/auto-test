@@ -23,7 +23,7 @@ let file = {
 const fs = require("fs");
 const path = require("path");
 
-const dirPath = "D:\\github\\node-server\\macro\\myfiles";
+const dirPath = path.resolve("./actions/myfiles");
 
 let pathIdMap = {};
 let id_counter = 0;
