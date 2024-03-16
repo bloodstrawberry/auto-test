@@ -25,8 +25,8 @@ jobs:
       # library 설치
       - name: Install dependencies
         run: |
-        npm install @octokit/rest
-        npm install node-fetch@2
+          npm install @octokit/rest
+          npm install node-fetch@2
 
       # make_dir_map.js 실행
       - name: node make_dir_map.js 
