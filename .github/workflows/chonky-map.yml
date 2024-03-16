@@ -30,7 +30,5 @@ jobs:
 
       # make_dir_map.js 실행
       - name: node make_dir_map.js 
-        run: |
-          node ./actions/make_dir_map.js
-          
+        run: node ./actions/make_dir_map.js         
 
