@@ -1,25 +1,15 @@
-// isHidden x
-
-let dir = {
-  id: "",
-  name: "",
-  isDir: true,
-  modDate: "",
-  childrenIds: [],
-  childrenCount: 0,
-  parentId: "",
-};
-
-let file = {
-  id: "",
-  name: "",
-  size: "",
-  modDate: "",
-  parentId: "",
-};
-
 const fs = require("fs");
 const path = require("path");
+const fetch = require("node-fetch");
+
+const { Octokit } = require("@octokit/core");
+
+const octokit = new Octokit({
+  auth: process.env.GH_TOKEN,
+  request: {
+    fetch: fetch,
+  },
+});
 
 const dirPath = path.resolve("./actions/myfiles");
 console.log({ dirPath });
@@ -111,6 +101,62 @@ let fileMap = {
 
 makeChonkyMap(dirPath);
 
+const getSHA = async (path) => {
+  try {
+    const result = await octokit.request(
+      `GET /repos/bloodstrawberry/auto-test/contents/${path}`,
+      {
+        owner: "bloodstrawberry",
+        repo: "auto-test",
+        path,
+      }
+    );
+
+    return result.data.sha;
+  } catch (e) {
+    console.log("error : ", e);
+    return undefined;
+  }
+};
+
+const fileWrite = async (path, contents) => {
+  const currentSHA = await getSHA(path);
+  const result = await octokit.request(
+    `PUT /repos/bloodstrawberry/auto-test/contents/${path}`,
+    {
+      owner: "bloodstrawberry",
+      repo: "auto-test",
+      path,
+      message: `Update ${path}`,
+      sha: currentSHA,
+      committer: {
+        name: "bloodstrawberry",
+        email: "bloodstrawberry@github.com",
+      },
+      content: `${btoa(contents)}`, // or `${Buffer.from(contents).toString("base64")}`,      
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    }
+  );
+
+  return result.status;
+};
+
+const updateChonkyMap = async (json) => {
+  const filePath = "actions/config/chonky_map.json";
+  try {
+    let response = await fileWrite(filePath, json);    
+    console.log(response);
+  } catch (err) {
+    console.error("error : ", err);
+    process.exit(1);
+  }
+};
+
 let json = JSON.stringify({ rootFolderId, fileMap }, null, 4);
-console.log(json);
 // fs.writeFileSync("dir_map.json", json, "utf-8");
+
+console.log(json);
+
+updateChonkyMap(json);
