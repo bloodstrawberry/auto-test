@@ -1,3 +1,3 @@
-### info 1 파일!!
+### info 1 File!!
 
 info 1!!
