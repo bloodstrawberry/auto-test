@@ -1,0 +1,126 @@
+{
+    "rootFolderId": "id_0",
+    "fileMap": {
+        "id_0": {
+            "id": "id_0",
+            "name": "myfiles",
+            "isDir": true,
+            "childrenIds": [
+                "id_1",
+                "id_5",
+                "id_11",
+                "id_12",
+                "id_13"
+            ],
+            "childrenCount": 5
+        },
+        "id_1": {
+            "id": "id_1",
+            "name": "handsontable",
+            "isDir": true,
+            "modDate": "2024-03-16T08:55:22.649Z",
+            "childrenIds": [
+                "id_2",
+                "id_3",
+                "id_4"
+            ],
+            "childrenCount": 3,
+            "parentId": "id_0"
+        },
+        "id_2": {
+            "id": "id_2",
+            "name": "data1.json",
+            "size": 0,
+            "modDate": "2024-03-16T08:55:06.480Z",
+            "parentId": "id_1"
+        },
+        "id_3": {
+            "id": "id_3",
+            "name": "data2.json",
+            "size": 0,
+            "modDate": "2024-03-16T08:55:06.480Z",
+            "parentId": "id_1"
+        },
+        "id_4": {
+            "id": "id_4",
+            "name": "data3.json",
+            "size": 0,
+            "modDate": "2024-03-16T08:55:06.480Z",
+            "parentId": "id_1"
+        },
+        "id_5": {
+            "id": "id_5",
+            "name": "markdown",
+            "isDir": true,
+            "modDate": "2024-03-16T08:54:25.907Z",
+            "childrenIds": [
+                "id_6",
+                "id_10"
+            ],
+            "childrenCount": 2,
+            "parentId": "id_0"
+        },
+        "id_6": {
+            "id": "id_6",
+            "name": "information",
+            "isDir": true,
+            "modDate": "2024-03-16T08:54:40.968Z",
+            "childrenIds": [
+                "id_7",
+                "id_8",
+                "id_9"
+            ],
+            "childrenCount": 3,
+            "parentId": "id_5"
+        },
+        "id_7": {
+            "id": "id_7",
+            "name": "info1.md",
+            "size": 14,
+            "modDate": "2023-06-02T06:45:33.755Z",
+            "parentId": "id_6"
+        },
+        "id_8": {
+            "id": "id_8",
+            "name": "info2.md",
+            "size": 14,
+            "modDate": "2023-06-02T06:45:33.755Z",
+            "parentId": "id_6"
+        },
+        "id_9": {
+            "id": "id_9",
+            "name": "info3.md",
+            "size": 14,
+            "modDate": "2023-06-02T06:45:33.755Z",
+            "parentId": "id_6"
+        },
+        "id_10": {
+            "id": "id_10",
+            "name": "Manual.md",
+            "size": 14,
+            "modDate": "2023-06-02T06:45:33.755Z",
+            "parentId": "id_5"
+        },
+        "id_11": {
+            "id": "id_11",
+            "name": "package-lock.json",
+            "size": 3,
+            "modDate": "2023-06-02T06:44:17.496Z",
+            "parentId": "id_0"
+        },
+        "id_12": {
+            "id": "id_12",
+            "name": "package.json",
+            "size": 3,
+            "modDate": "2023-06-02T06:44:07.929Z",
+            "parentId": "id_0"
+        },
+        "id_13": {
+            "id": "id_13",
+            "name": "README.md",
+            "size": 3,
+            "modDate": "2023-06-02T06:44:17.496Z",
+            "parentId": "id_0"
+        }
+    }
+}
