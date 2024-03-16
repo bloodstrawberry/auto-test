@@ -7,579 +7,127 @@
             "isDir": true,
             "childrenIds": [
                 "id_1",
-                "id_14",
-                "id_28",
-                "id_56",
-                "id_57",
-                "id_58",
-                "id_59",
-                "id_60",
-                "id_61",
-                "id_62",
-                "id_63",
-                "id_64",
-                "id_65",
-                "id_66",
-                "id_67",
-                "id_68",
-                "id_69"
+                "id_2",
+                "id_6",
+                "id_12",
+                "id_13",
+                "id_14"
             ],
-            "childrenCount": 17
+            "childrenCount": 6
         },
         "id_1": {
             "id": "id_1",
-            "name": "abc1",
-            "isDir": true,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "childrenIds": [
-                "id_2",
-                "id_3",
-                "id_4",
-                "id_5",
-                "id_6",
-                "id_11"
-            ],
-            "childrenCount": 6,
+            "name": "README.md",
+            "size": 3,
+            "modDate": "2024-03-16T10:47:49.820Z",
             "parentId": "id_0"
         },
         "id_2": {
             "id": "id_2",
-            "name": "abc1_jsonfile1.json",
-            "size": 14,
-            "modDate": "2024-03-16T10:29:53.705Z",
-            "parentId": "id_1"
+            "name": "handsontable",
+            "isDir": true,
+            "modDate": "2024-03-16T10:47:49.820Z",
+            "childrenIds": [
+                "id_3",
+                "id_4",
+                "id_5"
+            ],
+            "childrenCount": 3,
+            "parentId": "id_0"
         },
         "id_3": {
             "id": "id_3",
-            "name": "abc1_jsonfile2.json",
-            "size": 14,
-            "modDate": "2024-03-16T10:29:53.705Z",
-            "parentId": "id_1"
+            "name": "data1.json",
+            "size": 0,
+            "modDate": "2024-03-16T10:47:49.820Z",
+            "parentId": "id_2"
         },
         "id_4": {
             "id": "id_4",
-            "name": "abc1_textfile1.txt",
-            "size": 14,
-            "modDate": "2024-03-16T10:29:53.705Z",
-            "parentId": "id_1"
+            "name": "data2 - 복사본.json",
+            "size": 0,
+            "modDate": "2024-03-16T10:47:49.820Z",
+            "parentId": "id_2"
         },
         "id_5": {
             "id": "id_5",
-            "name": "abc1_textfile2.txt",
-            "size": 14,
-            "modDate": "2024-03-16T10:29:53.705Z",
-            "parentId": "id_1"
+            "name": "data2.json",
+            "size": 0,
+            "modDate": "2024-03-16T10:47:49.820Z",
+            "parentId": "id_2"
         },
         "id_6": {
             "id": "id_6",
-            "name": "abc2",
+            "name": "markdown",
             "isDir": true,
-            "modDate": "2024-03-16T10:29:53.705Z",
+            "modDate": "2024-03-16T10:47:49.820Z",
             "childrenIds": [
                 "id_7",
                 "id_8"
             ],
             "childrenCount": 2,
-            "parentId": "id_1"
+            "parentId": "id_0"
         },
         "id_7": {
             "id": "id_7",
-            "name": "abc2_jsonfile.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.705Z",
+            "name": "Manual.md",
+            "size": 14,
+            "modDate": "2024-03-16T10:47:49.820Z",
             "parentId": "id_6"
         },
         "id_8": {
             "id": "id_8",
-            "name": "abc3",
+            "name": "information",
             "isDir": true,
-            "modDate": "2024-03-16T10:29:53.705Z",
+            "modDate": "2024-03-16T10:47:49.820Z",
             "childrenIds": [
                 "id_9",
-                "id_10"
+                "id_10",
+                "id_11"
             ],
-            "childrenCount": 2,
+            "childrenCount": 3,
             "parentId": "id_6"
         },
         "id_9": {
             "id": "id_9",
-            "name": "abc3_jsonfile.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.705Z",
+            "name": "info1.md",
+            "size": 14,
+            "modDate": "2024-03-16T10:47:49.820Z",
             "parentId": "id_8"
         },
         "id_10": {
             "id": "id_10",
-            "name": "abc3_textfile.txt",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.705Z",
+            "name": "info2.md",
+            "size": 14,
+            "modDate": "2024-03-16T10:47:49.820Z",
             "parentId": "id_8"
         },
         "id_11": {
             "id": "id_11",
-            "name": "abc2_2",
-            "isDir": true,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "childrenIds": [
-                "id_12",
-                "id_13"
-            ],
-            "childrenCount": 2,
-            "parentId": "id_1"
+            "name": "info3.md",
+            "size": 14,
+            "modDate": "2024-03-16T10:47:49.820Z",
+            "parentId": "id_8"
         },
         "id_12": {
             "id": "id_12",
-            "name": "abc2_2_jsonfile.json",
-            "size": 15,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_11"
+            "name": "package-lock-2.json",
+            "size": 3,
+            "modDate": "2024-03-16T10:47:49.820Z",
+            "parentId": "id_0"
         },
         "id_13": {
             "id": "id_13",
-            "name": "abc2_2_textfile.txt",
-            "size": 15,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_11"
+            "name": "package-lock.json",
+            "size": 3,
+            "modDate": "2024-03-16T10:47:49.820Z",
+            "parentId": "id_0"
         },
         "id_14": {
             "id": "id_14",
-            "name": "def1",
-            "isDir": true,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "childrenIds": [
-                "id_15",
-                "id_16",
-                "id_17",
-                "id_18",
-                "id_19",
-                "id_20",
-                "id_21",
-                "id_22",
-                "id_23",
-                "id_24",
-                "id_25",
-                "id_26",
-                "id_27"
-            ],
-            "childrenCount": 13,
-            "parentId": "id_0"
-        },
-        "id_15": {
-            "id": "id_15",
-            "name": "def_jsonfile1.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_16": {
-            "id": "id_16",
-            "name": "def_jsonfile10.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_17": {
-            "id": "id_17",
-            "name": "def_jsonfile11.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_18": {
-            "id": "id_18",
-            "name": "def_jsonfile2.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_19": {
-            "id": "id_19",
-            "name": "def_jsonfile3.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_20": {
-            "id": "id_20",
-            "name": "def_jsonfile4.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_21": {
-            "id": "id_21",
-            "name": "def_jsonfile5.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_22": {
-            "id": "id_22",
-            "name": "def_jsonfile6.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_23": {
-            "id": "id_23",
-            "name": "def_jsonfile7.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_24": {
-            "id": "id_24",
-            "name": "def_jsonfile8.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_25": {
-            "id": "id_25",
-            "name": "def_jsonfile9.json",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_26": {
-            "id": "id_26",
-            "name": "def_textfile1.txt",
-            "size": 13,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_27": {
-            "id": "id_27",
-            "name": "def_textfile2.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_14"
-        },
-        "id_28": {
-            "id": "id_28",
-            "name": "ghi1",
-            "isDir": true,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "childrenIds": [
-                "id_29",
-                "id_30",
-                "id_31",
-                "id_32",
-                "id_33",
-                "id_34",
-                "id_35",
-                "id_36",
-                "id_37",
-                "id_38",
-                "id_39",
-                "id_40",
-                "id_41"
-            ],
-            "childrenCount": 13,
-            "parentId": "id_0"
-        },
-        "id_29": {
-            "id": "id_29",
-            "name": "ghi1_textfile1.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_30": {
-            "id": "id_30",
-            "name": "ghi1_textfile10.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_31": {
-            "id": "id_31",
-            "name": "ghi1_textfile11.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_32": {
-            "id": "id_32",
-            "name": "ghi1_textfile12.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_33": {
-            "id": "id_33",
-            "name": "ghi1_textfile2.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_34": {
-            "id": "id_34",
-            "name": "ghi1_textfile3.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_35": {
-            "id": "id_35",
-            "name": "ghi1_textfile4.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_36": {
-            "id": "id_36",
-            "name": "ghi1_textfile5.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_37": {
-            "id": "id_37",
-            "name": "ghi1_textfile6.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_38": {
-            "id": "id_38",
-            "name": "ghi1_textfile7.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_39": {
-            "id": "id_39",
-            "name": "ghi1_textfile8.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_40": {
-            "id": "id_40",
-            "name": "ghi1_textfile9.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_28"
-        },
-        "id_41": {
-            "id": "id_41",
-            "name": "ghi2",
-            "isDir": true,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "childrenIds": [
-                "id_42",
-                "id_43",
-                "id_44",
-                "id_45",
-                "id_46",
-                "id_47",
-                "id_48",
-                "id_49",
-                "id_50",
-                "id_51",
-                "id_52",
-                "id_53",
-                "id_54",
-                "id_55"
-            ],
-            "childrenCount": 14,
-            "parentId": "id_28"
-        },
-        "id_42": {
-            "id": "id_42",
-            "name": "ghi2_jsonfile1.json",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_43": {
-            "id": "id_43",
-            "name": "ghi2_jsonfile2.json",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_44": {
-            "id": "id_44",
-            "name": "ghi2_textfile1.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_45": {
-            "id": "id_45",
-            "name": "ghi2_textfile10.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_46": {
-            "id": "id_46",
-            "name": "ghi2_textfile11.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_47": {
-            "id": "id_47",
-            "name": "ghi2_textfile12.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_48": {
-            "id": "id_48",
-            "name": "ghi2_textfile2.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_49": {
-            "id": "id_49",
-            "name": "ghi2_textfile3.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_50": {
-            "id": "id_50",
-            "name": "ghi2_textfile4.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_51": {
-            "id": "id_51",
-            "name": "ghi2_textfile5.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_52": {
-            "id": "id_52",
-            "name": "ghi2_textfile6.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_53": {
-            "id": "id_53",
-            "name": "ghi2_textfile7.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_54": {
-            "id": "id_54",
-            "name": "ghi2_textfile8.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_55": {
-            "id": "id_55",
-            "name": "ghi2_textfile9.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_41"
-        },
-        "id_56": {
-            "id": "id_56",
-            "name": "jsonfile13.json",
+            "name": "package.json",
             "size": 3,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_57": {
-            "id": "id_57",
-            "name": "jsonfile14.json",
-            "size": 3,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_58": {
-            "id": "id_58",
-            "name": "jsonfile15.json",
-            "size": 3,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_59": {
-            "id": "id_59",
-            "name": "textfile1.txt",
-            "size": 7,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_60": {
-            "id": "id_60",
-            "name": "textfile10.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_61": {
-            "id": "id_61",
-            "name": "textfile11.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_62": {
-            "id": "id_62",
-            "name": "textfile2.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_63": {
-            "id": "id_63",
-            "name": "textfile3.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_64": {
-            "id": "id_64",
-            "name": "textfile4.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_65": {
-            "id": "id_65",
-            "name": "textfile5.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_66": {
-            "id": "id_66",
-            "name": "textfile6.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_67": {
-            "id": "id_67",
-            "name": "textfile7.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_68": {
-            "id": "id_68",
-            "name": "textfile8.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
-            "parentId": "id_0"
-        },
-        "id_69": {
-            "id": "id_69",
-            "name": "textfile9.txt",
-            "size": 0,
-            "modDate": "2024-03-16T10:29:53.709Z",
+            "modDate": "2024-03-16T10:47:49.820Z",
             "parentId": "id_0"
         }
     }
