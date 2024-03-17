@@ -14,7 +14,7 @@ jobs:
       GH_TOKEN: ${{ secrets.MY_TOKEN }}
 
     steps:
-      - name: Wait for 10 minutes
+      - name: Wait for 5 minutes
         run: sleep 300 # 300 seconds : 5 minutes
 
       - name: Checkout code
