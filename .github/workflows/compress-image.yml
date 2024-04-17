@@ -1,9 +1,6 @@
 name: Compress Image
 
-on:
-  push:
-    paths:
-      - actions/images/*
+on: pull_request
 
 jobs:
   compress_image:
@@ -17,3 +14,6 @@ jobs:
         uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          jpegQuality: "80"
+          pngQuality: "80"
+          webpQuality: "80"
