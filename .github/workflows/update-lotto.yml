@@ -3,7 +3,7 @@ name: Update Lotto File
 on:
   push:
   schedule:
-    - cron: '30 12 * * 6'
+    - cron: '40 12 * * 6'
 
 jobs:
   update-lotto:
