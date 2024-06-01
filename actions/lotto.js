@@ -2,7 +2,7 @@ const fs = require("fs");
 const axios = require("axios");
 const fetch = require("node-fetch");
 
-const { Octokit } = require("@octokit/core");
+const { Octokit } = require("@octokit/rest");
 
 const octokit = new Octokit({
   auth: process.env.GH_TOKEN,
@@ -76,7 +76,7 @@ const updateLottoJson = async () => {
     const lottoJson = JSON.parse(data);
     const lastNumber = lottoJson[lottoJson.length - 1].drwNo;
 
-    const latest = await getLottoNumber(lastNumber + 1);
+    const latest = await getLottoNumber(lastNumber);
    
     lottoJson.push(latest);
 
