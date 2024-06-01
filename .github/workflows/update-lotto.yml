@@ -1,8 +1,11 @@
 name: Update Lotto File
 
 on:
-  schedule:
-    - cron: '30 12 * * 6'
+  push:
+    branches:
+      - main
+  #schedule:
+  #  - cron: '30 12 * * 6'
 
 jobs:
   update-lotto:
