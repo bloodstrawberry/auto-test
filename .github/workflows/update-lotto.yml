@@ -23,7 +23,7 @@ jobs:
     - name: Install Dependencies
       run: |
         npm install axios
-        npm install @octokit/rest
+        npm install @octokit/rest@20.0.2
         npm install node-fetch@2
 
     - name: Run Node.js Script
