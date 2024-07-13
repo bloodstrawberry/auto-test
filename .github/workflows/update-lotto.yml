@@ -1,8 +1,8 @@
-name: Update Lotto File
+name: Update Lotto File!!
 
 on:
   schedule:
-    - cron: '15 * * * *' # UTC 12:15 + 9 -> KST 21:15 '15 12 * * 6'
+    - cron: '10 * * * *' # UTC 12:15 + 9 -> KST 21:15 '15 12 * * 6'
 
 jobs:
   update-lotto:
