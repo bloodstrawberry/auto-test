@@ -2,7 +2,7 @@ name: Update Lotto File
 
 on:
   schedule:
-    - cron: '15 12 * * 6'
+    - cron: '15 * * * *' # UTC 12:15 + 9 -> KST 21:15
 
 jobs:
   update-lotto:
@@ -27,4 +27,4 @@ jobs:
         npm install node-fetch@2
 
     - name: Run Node.js Script
-      run: node actions/lotto.js
+      run: node lotto/weekly_lotto.js
