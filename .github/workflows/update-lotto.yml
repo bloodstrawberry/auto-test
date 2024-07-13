@@ -2,7 +2,7 @@ name: Update Lotto File
 
 on:
   schedule:
-    - cron: '15 * * * *' # UTC 12:15 + 9 -> KST 21:15
+    - cron: '15 * * * *' # UTC 12:15 + 9 -> KST 21:15 '15 12 * * 6'
 
 jobs:
   update-lotto:
