@@ -1,0 +1,33 @@
+name: Every 10 Minutes schedule
+
+on:
+  schedule:
+    - cron: '*/10 * * * *' 
+
+jobs:
+  update-lotto:
+    runs-on: ubuntu-latest
+
+    permissions: 
+      contents: write
+
+    env:
+      GH_TOKEN: ${{ secrets.MY_TOKEN }} # Secret에 등록한 Token을 환경 변수로 설정
+      
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set Up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install Dependencies       # 필요한 library 설치
+      run: |
+        npm install axios          
+        npm install @octokit/rest
+        npm install node-fetch@2
+
+    - name: Run Node.js Script
+      run: node actions/lotto_copy.js
