@@ -1,4 +1,4 @@
-name: Every 10 Minutes schedule
+name: Every 10 Minutes Write
 
 on:
   schedule:
