@@ -17,4 +17,4 @@ jobs:
           echo "Current Time"
           echo "UTC   : $(date +"%Y-%m-%dT%H:%M:%SZ")"
           echo "SEOUL : $(TZ=Asia/Seoul date +"%Y-%m-%dT%H:%M:%SZ")"
-          cp actions/lotto.json actions/lotto_copy.json
+          cp ./actions/lotto.json ./actions/lotto_copy.json
